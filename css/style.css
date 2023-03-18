@@ -244,4 +244,7 @@ h1 {
     .swiper-slide img {
       height: 560px;
     }
+    .bg_image__four {
+      width: 300px;
+    }
   }
