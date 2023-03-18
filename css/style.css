@@ -230,4 +230,7 @@ h1 {
     .photo-container {
 
     }
+    .swiper-slide img {
+      height: 560px;
+    }
   }
