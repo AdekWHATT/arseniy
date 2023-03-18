@@ -189,16 +189,16 @@ h1 {
     position: absolute;
     opacity: 0.1;
     width: 300px;
-    top: 12%;
-    left: 5%;
+    top: 24%;
+    left: 2%;
     z-index: -1;
   }
   .bg_image__two {
     position: absolute;
     opacity: 0.1;
     width: 300px;
-    top: 1%;
-    right: 10%;
+    top: 0;
+    right: 12%;
     z-index: -1;
   }
   .bg_image__three {
@@ -209,6 +209,17 @@ h1 {
     right: 0;
     left: 50px;
     z-index: -1;
+  }
+  .bg_image__four {
+    position: absolute;
+    opacity: 0.2;
+    width: 800px;
+    top: 19%;
+    right: 49%;
+    left: 49%;
+    transform: translate(-49%, -49%);
+    z-index: -1;
+    filter: blur(2px);
   }
   @media (max-width: 1199px) {
     .photo-container {
