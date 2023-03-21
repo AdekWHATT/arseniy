@@ -221,6 +221,50 @@ h1 {
     z-index: -1;
     filter: blur(2px);
   }
+
+  .navbar-toggler-icon_new {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    position: relative;
+  }
+  
+  .navbar-toggler-icon_new span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 0.2em;
+    background-color: #333;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar-toggler-icon_new span:nth-of-type(1) {
+    transform-origin: left center;
+  }
+  
+  .navbar-toggler-icon_new span:nth-of-type(2) {
+    transform-origin: center center;
+  }
+  
+  .navbar-toggler-icon_new span:nth-of-type(3) {
+    transform-origin: right center;
+  }
+  
+  .navbar-toggler:not(.collapsed) .navbar-toggler-icon_new span:nth-of-type(1) {
+    transform: translate(0, -50%) rotate(45deg);
+  }
+  
+  .navbar-toggler:not(.collapsed) .navbar-toggler-icon_new span:nth-of-type(2) {
+    opacity: 0;
+  }
+  
+  .navbar-toggler:not(.collapsed) .navbar-toggler-icon_new span:nth-of-type(3) {
+    transform: translate(0, -50%) rotate(-45deg);
+  }
+  
   @media (max-width: 1199px) {
     .photo-container {
       grid-auto-columns: 1fr 1fr 1fr;
@@ -247,4 +291,44 @@ h1 {
     .bg_image__four {
       width: 300px;
     }
+    .bg_image__three {
+      top: 52%;
+      width: 276px;
+    }
   }
+
+  /* Начальные стили */
+.burger {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  content: "\f15a";
+  font-family: "woodmart-font";
+  position: relative;
+  transition: transform 0.5s ease; /* добавляем плавный переход */
+}
+
+/* Стили для псевдоэлементов */
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #000; /* цвет креста */
+  transition: transform 0.5s ease; /* добавляем плавный переход */
+}
+
+/* Стили при наведении на блок */
+.block:hover .burger {
+  transform: rotate(45deg); /* поворачиваем бургер на 45 градусов */
+}
+
+.block:hover .burger::before {
+  transform: rotate(90deg) translate(0, -50%); /* поворачиваем верхнюю линию на 90 градусов и перемещаем ее вверх */
+}
+
+.block:hover .burger::after {
+  transform: rotate(90deg) translate(0, 50%); /* поворачиваем нижнюю линию на 90 градусов и перемещаем ее вниз */
+}
